@@ -59,7 +59,19 @@ class Bag with ChangeNotifier {
     }
     notifyListeners();
   }
+addSingleItem(String productId, int price, String title, int quantity, String image){
+ _items.update(
+        productId,
+        (existingItem) => BagItem(
+            id: existingItem.id,
+            title: existingItem.title,
+            quantity: existingItem.quantity + 1,
+            price: existingItem.price,
+            image: existingItem.image),
+      );
+      notifyListeners();
 
+}
   addItem(
       String productId, int price, String title, int quantity, String image) {
     if (_items.containsKey(productId)) {

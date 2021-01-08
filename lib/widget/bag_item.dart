@@ -101,7 +101,7 @@ class _BagItemsState extends State<BagItems> {
                     onTap: () {
                       setState(() {
                         widget.quantity++;
-                        bag.addItem(widget.productId, widget.price,
+                        bag.addSingleItem(widget.productId, widget.price,
                             widget.title, widget.quantity, widget.image);
                       });
                     },

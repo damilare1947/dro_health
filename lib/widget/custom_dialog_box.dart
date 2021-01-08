@@ -71,12 +71,8 @@ class _CustomDialogBoxState extends State<CustomDialogBox> {
                 width: double.infinity,
                 child: FlatButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, DraggableWidget.routeName);
-                      // Navigator.pushReplacement(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //       builder: (context) => DraggableWidget(),
-                      //     ));
+                      Navigator.of(context).pop();
+                      Navigator.of(context).pop();
                     },
                     color: Color(0xff0CB8B6),
                     child: Text(
